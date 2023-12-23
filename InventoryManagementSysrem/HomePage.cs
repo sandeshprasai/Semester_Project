@@ -11,7 +11,14 @@ using System.Windows.Forms;
 namespace InventoryManagementSysrem
 {
     public partial class HomePage : Form
-    {
+    {   
+        public HomePage()
+        {
+            InitializeComponent();
+            SideBarTransition.Interval = 10;
+            SideBarTransition.Tick += new EventHandler(sideBarTransition_Tick);
+            MenuBtn.Click += new EventHandler(MenuBtn_Click);
+        }
        
 
         public HomePage(string Usrstatus, string Username )
@@ -33,14 +40,14 @@ namespace InventoryManagementSysrem
         {
 
         }
-        bool sidebarExpand = true;
+        bool sidebarExpand = false;
         private void sideBarTransition_Tick(object sender, EventArgs e)
         {
             
             if (sidebarExpand)
             {
                 sideBar.Width -= 10;
-                if(sideBar.Width <= 70) {
+                if(sideBar.Width <= 50) {
                 sidebarExpand = false;  
                  SideBarTransition.Stop();
                 }
@@ -109,6 +116,8 @@ namespace InventoryManagementSysrem
         {
 
         }
+
+        
     }
 
 }

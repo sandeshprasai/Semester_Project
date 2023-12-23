@@ -163,7 +163,7 @@
             this.sideBar.Dock = System.Windows.Forms.DockStyle.Left;
             this.sideBar.Location = new System.Drawing.Point(0, 42);
             this.sideBar.Name = "sideBar";
-            this.sideBar.Size = new System.Drawing.Size(230, 788);
+            this.sideBar.Size = new System.Drawing.Size(66, 788);
             this.sideBar.TabIndex = 3;
             // 
             // panel2
@@ -265,7 +265,7 @@
             this.SalesPerson.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
             this.SalesPerson.Size = new System.Drawing.Size(283, 62);
             this.SalesPerson.TabIndex = 0;
-            this.SalesPerson.Text = "           Costomers";
+            this.SalesPerson.Text = "           SalesPerson";
             this.SalesPerson.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.SalesPerson.UseVisualStyleBackColor = false;
             // 
@@ -326,9 +326,9 @@
             // ChildFormPanel
             // 
             this.ChildFormPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ChildFormPanel.Location = new System.Drawing.Point(230, 42);
+            this.ChildFormPanel.Location = new System.Drawing.Point(66, 42);
             this.ChildFormPanel.Name = "ChildFormPanel";
-            this.ChildFormPanel.Size = new System.Drawing.Size(1364, 788);
+            this.ChildFormPanel.Size = new System.Drawing.Size(1528, 788);
             this.ChildFormPanel.TabIndex = 4;
             this.ChildFormPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.ChildFormPanel_Paint);
             // 
