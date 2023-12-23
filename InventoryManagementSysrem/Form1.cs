@@ -35,10 +35,7 @@ namespace InventoryManagementSysrem
         {
             String Username = UserName.Text.ToString();
             String password = Password.Text.ToString();
-
-            string connectionString = @"Data Source=localhost\sqlexpress;Initial Catalog=MyLogin;Integrated Security=True";
-            DatabaseManager databaseManager = new DatabaseManager(connectionString);
-
+            DatabaseManager databaseManager = new DatabaseManager();
             if (databaseManager.ValidateLogin(Username, password))
             {
                 // Valid login
@@ -56,6 +53,12 @@ namespace InventoryManagementSysrem
             }
 
         }
-       
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmRegistration fm = new frmRegistration();
+            fm.Show();
+            this.Hide();
+        }
     }
 }

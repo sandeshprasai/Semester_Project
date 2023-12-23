@@ -28,8 +28,9 @@ namespace InventoryManagementSysrem
             if(panel2.Width > 800) 
             {
                 timer1.Stop();
-                HomePage hm = new HomePage();
-                hm.Show();
+               
+                Form1 fm1 = new Form1();
+                fm1.Show();
                 this.Hide();
             }
         }

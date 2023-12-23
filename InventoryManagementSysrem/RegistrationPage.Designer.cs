@@ -30,18 +30,18 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtpassword = new System.Windows.Forms.TextBox();
+            this.Usrpassword = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.UserName = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtcomPassword = new System.Windows.Forms.TextBox();
+            this.RepatPassword = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.checkbxShowPas = new System.Windows.Forms.CheckBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.DateofBirth = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // label1
@@ -51,54 +51,50 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
             this.label1.Location = new System.Drawing.Point(71, 34);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(194, 34);
+            this.label1.Size = new System.Drawing.Size(191, 33);
             this.label1.TabIndex = 0;
             this.label1.Text = "Get Started";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(67, 194);
+            this.label2.Location = new System.Drawing.Point(67, 172);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(115, 23);
             this.label2.TabIndex = 1;
             this.label2.Text = "Date of Birth";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // txtpassword
+            // Usrpassword
             // 
-            this.txtpassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
-            this.txtpassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtpassword.Font = new System.Drawing.Font("MS UI Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtpassword.Location = new System.Drawing.Point(71, 304);
-            this.txtpassword.Multiline = true;
-            this.txtpassword.Name = "txtpassword";
-            this.txtpassword.Size = new System.Drawing.Size(216, 39);
-            this.txtpassword.TabIndex = 2;
-            this.txtpassword.TextChanged += new System.EventHandler(this.txtpassword_TextChanged);
+            this.Usrpassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.Usrpassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Usrpassword.Font = new System.Drawing.Font("MS UI Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Usrpassword.Location = new System.Drawing.Point(71, 304);
+            this.Usrpassword.Multiline = true;
+            this.Usrpassword.Name = "Usrpassword";
+            this.Usrpassword.PasswordChar = '*';
+            this.Usrpassword.Size = new System.Drawing.Size(216, 39);
+            this.Usrpassword.TabIndex = 2;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(73, 68);
+            this.label3.Location = new System.Drawing.Point(72, 75);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(89, 23);
             this.label3.TabIndex = 1;
             this.label3.Text = "Username";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // textBox2
+            // UserName
             // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("MS UI Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(71, 94);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(216, 45);
-            this.textBox2.TabIndex = 2;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.UserName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.UserName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.UserName.Font = new System.Drawing.Font("MS UI Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UserName.Location = new System.Drawing.Point(71, 98);
+            this.UserName.Multiline = true;
+            this.UserName.Name = "UserName";
+            this.UserName.Size = new System.Drawing.Size(216, 45);
+            this.UserName.TabIndex = 2;
             // 
             // label4
             // 
@@ -108,19 +104,18 @@
             this.label4.Size = new System.Drawing.Size(84, 23);
             this.label4.TabIndex = 1;
             this.label4.Text = "Password";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
-            // txtcomPassword
+            // RepatPassword
             // 
-            this.txtcomPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
-            this.txtcomPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtcomPassword.Font = new System.Drawing.Font("MS UI Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtcomPassword.Location = new System.Drawing.Point(71, 406);
-            this.txtcomPassword.Multiline = true;
-            this.txtcomPassword.Name = "txtcomPassword";
-            this.txtcomPassword.Size = new System.Drawing.Size(216, 40);
-            this.txtcomPassword.TabIndex = 2;
-            this.txtcomPassword.TextChanged += new System.EventHandler(this.txtcomPassword_TextChanged);
+            this.RepatPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.RepatPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.RepatPassword.Font = new System.Drawing.Font("MS UI Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RepatPassword.Location = new System.Drawing.Point(71, 406);
+            this.RepatPassword.Multiline = true;
+            this.RepatPassword.Name = "RepatPassword";
+            this.RepatPassword.PasswordChar = '*';
+            this.RepatPassword.Size = new System.Drawing.Size(216, 40);
+            this.RepatPassword.TabIndex = 2;
             // 
             // label5
             // 
@@ -130,7 +125,6 @@
             this.label5.Size = new System.Drawing.Size(155, 23);
             this.label5.TabIndex = 1;
             this.label5.Text = "Confirm Password";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // checkbxShowPas
             // 
@@ -182,7 +176,6 @@
             this.label6.Size = new System.Drawing.Size(211, 23);
             this.label6.TabIndex = 5;
             this.label6.Text = "Already Have an Account";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label7
             // 
@@ -194,15 +187,13 @@
             this.label7.Size = new System.Drawing.Size(126, 23);
             this.label7.TabIndex = 5;
             this.label7.Text = "Back to LOGIN";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
-            // dateTimePicker1
+            // DateofBirth
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(71, 220);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 30);
-            this.dateTimePicker1.TabIndex = 6;
-            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            this.DateofBirth.Location = new System.Drawing.Point(36, 198);
+            this.DateofBirth.Name = "DateofBirth";
+            this.DateofBirth.Size = new System.Drawing.Size(318, 30);
+            this.DateofBirth.TabIndex = 6;
             // 
             // frmRegistration
             // 
@@ -210,15 +201,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(366, 689);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.DateofBirth);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.checkbxShowPas);
-            this.Controls.Add(this.txtcomPassword);
-            this.Controls.Add(this.txtpassword);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.RepatPassword);
+            this.Controls.Add(this.Usrpassword);
+            this.Controls.Add(this.UserName);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -228,7 +219,7 @@
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(165)))), ((int)(((byte)(169)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Location = new System.Drawing.Point(28, 68);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmRegistration";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RegistrationPage";
@@ -241,17 +232,17 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtpassword;
+        private System.Windows.Forms.TextBox Usrpassword;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox UserName;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtcomPassword;
+        private System.Windows.Forms.TextBox RepatPassword;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.CheckBox checkbxShowPas;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker DateofBirth;
     }
 }

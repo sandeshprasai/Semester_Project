@@ -45,6 +45,8 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -63,11 +65,13 @@
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(131, 190);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(971, 504);
+            this.panel1.Size = new System.Drawing.Size(971, 551);
             this.panel1.TabIndex = 0;
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.button1);
+            this.panel3.Controls.Add(this.label5);
             this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.button2);
@@ -82,7 +86,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel3.Location = new System.Drawing.Point(468, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(503, 504);
+            this.panel3.Size = new System.Drawing.Size(503, 551);
             this.panel3.TabIndex = 1;
             // 
             // label4
@@ -214,7 +218,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(468, 504);
+            this.panel2.Size = new System.Drawing.Size(468, 551);
             this.panel2.TabIndex = 0;
             // 
             // pictureBox1
@@ -223,10 +227,34 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(468, 504);
+            this.pictureBox1.Size = new System.Drawing.Size(468, 551);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(35, 487);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(148, 29);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "New User? ";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(238)))), ((int)(((byte)(8)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(61)))), ((int)(((byte)(86)))));
+            this.button1.Location = new System.Drawing.Point(268, 483);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(211, 39);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "Register Here";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
@@ -273,6 +301,8 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label5;
     }
 }
 
