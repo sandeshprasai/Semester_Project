@@ -60,9 +60,12 @@ namespace InventoryManagementSysrem
                             {
                                 // Check UserStatus
                                 string userStatus = dataTable.Rows[0]["UsrStatus"].ToString();
+                                string userType = dataTable.Rows[0]["UsrRole"].ToString();
                                 if (userStatus == "Approved")
                                 {
                                     MessageBox.Show("Login SucessFull");
+                                    HomePage HM = new HomePage(userType, username);
+                                    HM.Show();
                                     return true;
                                 }
                                 else

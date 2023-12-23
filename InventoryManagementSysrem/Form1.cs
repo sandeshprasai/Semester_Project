@@ -38,10 +38,8 @@ namespace InventoryManagementSysrem
             DatabaseManager databaseManager = new DatabaseManager();
             if (databaseManager.ValidateLogin(Username, password))
             {
-                // Valid login
-                HomePage HM = new HomePage();
-                HM.Show();
                 this.Hide();
+                
             }
             else
             {

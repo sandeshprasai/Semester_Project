@@ -13,13 +13,21 @@ namespace InventoryManagementSysrem
     public partial class HomePage : Form
     {
        
-        public HomePage()
+
+        public HomePage(string Usrstatus, string Username )
         {
+
             InitializeComponent();
             SideBarTransition.Interval = 10; 
             SideBarTransition.Tick += new EventHandler(sideBarTransition_Tick);
             MenuBtn.Click += new EventHandler(MenuBtn_Click);
-            
+            label2.Text = "Hello " + Username;
+            if (Usrstatus=="User")
+            {
+                Product.Hide();
+                Categories.Hide();
+                SalesPerson.Hide();
+            }
         }
         private void label1_Click(object sender, EventArgs e)
         {

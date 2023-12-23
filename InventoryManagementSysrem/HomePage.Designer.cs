@@ -42,15 +42,15 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.HomeBtn = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
+            this.Product = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
+            this.Categories = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
+            this.SalesPerson = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
+            this.Order = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.button6 = new System.Windows.Forms.Button();
+            this.LogOut = new System.Windows.Forms.Button();
             this.SideBarTransition = new System.Windows.Forms.Timer(this.components);
             this.ChildFormPanel = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
@@ -195,129 +195,129 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.button2);
+            this.panel3.Controls.Add(this.Product);
             this.panel3.Location = new System.Drawing.Point(3, 69);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(229, 60);
             this.panel3.TabIndex = 5;
             // 
-            // button2
+            // Product
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(29)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Segoe UI Black", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(-43, -1);
-            this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(283, 62);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "           Products";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.Product.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(29)))));
+            this.Product.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Product.Font = new System.Drawing.Font("Segoe UI Black", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Product.ForeColor = System.Drawing.Color.White;
+            this.Product.Image = ((System.Drawing.Image)(resources.GetObject("Product.Image")));
+            this.Product.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Product.Location = new System.Drawing.Point(-43, -1);
+            this.Product.Name = "Product";
+            this.Product.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.Product.Size = new System.Drawing.Size(283, 62);
+            this.Product.TabIndex = 0;
+            this.Product.Text = "           Products";
+            this.Product.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Product.UseVisualStyleBackColor = false;
+            this.Product.Click += new System.EventHandler(this.button2_Click);
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.button3);
+            this.panel4.Controls.Add(this.Categories);
             this.panel4.Location = new System.Drawing.Point(3, 135);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(229, 60);
             this.panel4.TabIndex = 6;
             // 
-            // button3
+            // Categories
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(29)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Segoe UI Black", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(-43, -1);
-            this.button3.Name = "button3";
-            this.button3.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.button3.Size = new System.Drawing.Size(283, 62);
-            this.button3.TabIndex = 0;
-            this.button3.Text = "           Categories";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.UseVisualStyleBackColor = false;
+            this.Categories.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(29)))));
+            this.Categories.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Categories.Font = new System.Drawing.Font("Segoe UI Black", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Categories.ForeColor = System.Drawing.Color.White;
+            this.Categories.Image = ((System.Drawing.Image)(resources.GetObject("Categories.Image")));
+            this.Categories.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Categories.Location = new System.Drawing.Point(-43, -1);
+            this.Categories.Name = "Categories";
+            this.Categories.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.Categories.Size = new System.Drawing.Size(283, 62);
+            this.Categories.TabIndex = 0;
+            this.Categories.Text = "           Categories";
+            this.Categories.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Categories.UseVisualStyleBackColor = false;
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.button4);
+            this.panel5.Controls.Add(this.SalesPerson);
             this.panel5.Location = new System.Drawing.Point(3, 201);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(229, 60);
             this.panel5.TabIndex = 5;
             // 
-            // button4
+            // SalesPerson
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(29)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Segoe UI Black", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(-43, -1);
-            this.button4.Name = "button4";
-            this.button4.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.button4.Size = new System.Drawing.Size(283, 62);
-            this.button4.TabIndex = 0;
-            this.button4.Text = "           Costomers";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.UseVisualStyleBackColor = false;
+            this.SalesPerson.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(29)))));
+            this.SalesPerson.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SalesPerson.Font = new System.Drawing.Font("Segoe UI Black", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SalesPerson.ForeColor = System.Drawing.Color.White;
+            this.SalesPerson.Image = ((System.Drawing.Image)(resources.GetObject("SalesPerson.Image")));
+            this.SalesPerson.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.SalesPerson.Location = new System.Drawing.Point(-43, -1);
+            this.SalesPerson.Name = "SalesPerson";
+            this.SalesPerson.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.SalesPerson.Size = new System.Drawing.Size(283, 62);
+            this.SalesPerson.TabIndex = 0;
+            this.SalesPerson.Text = "           Costomers";
+            this.SalesPerson.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.SalesPerson.UseVisualStyleBackColor = false;
             // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.button5);
+            this.panel6.Controls.Add(this.Order);
             this.panel6.Location = new System.Drawing.Point(3, 267);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(229, 60);
             this.panel6.TabIndex = 7;
             // 
-            // button5
+            // Order
             // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(29)))));
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Segoe UI Black", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(-43, -1);
-            this.button5.Name = "button5";
-            this.button5.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.button5.Size = new System.Drawing.Size(283, 62);
-            this.button5.TabIndex = 0;
-            this.button5.Text = "           Orders";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.UseVisualStyleBackColor = false;
+            this.Order.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(29)))));
+            this.Order.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Order.Font = new System.Drawing.Font("Segoe UI Black", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Order.ForeColor = System.Drawing.Color.White;
+            this.Order.Image = ((System.Drawing.Image)(resources.GetObject("Order.Image")));
+            this.Order.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Order.Location = new System.Drawing.Point(-43, -1);
+            this.Order.Name = "Order";
+            this.Order.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.Order.Size = new System.Drawing.Size(283, 62);
+            this.Order.TabIndex = 0;
+            this.Order.Text = "           Orders";
+            this.Order.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Order.UseVisualStyleBackColor = false;
             // 
             // panel7
             // 
-            this.panel7.Controls.Add(this.button6);
+            this.panel7.Controls.Add(this.LogOut);
             this.panel7.Location = new System.Drawing.Point(3, 333);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(229, 60);
             this.panel7.TabIndex = 8;
             // 
-            // button6
+            // LogOut
             // 
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(29)))));
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Segoe UI Black", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(-43, -1);
-            this.button6.Name = "button6";
-            this.button6.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.button6.Size = new System.Drawing.Size(283, 62);
-            this.button6.TabIndex = 0;
-            this.button6.Text = "           LogOut";
-            this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.UseVisualStyleBackColor = false;
+            this.LogOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(29)))));
+            this.LogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LogOut.Font = new System.Drawing.Font("Segoe UI Black", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LogOut.ForeColor = System.Drawing.Color.White;
+            this.LogOut.Image = ((System.Drawing.Image)(resources.GetObject("LogOut.Image")));
+            this.LogOut.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.LogOut.Location = new System.Drawing.Point(-43, -1);
+            this.LogOut.Name = "LogOut";
+            this.LogOut.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.LogOut.Size = new System.Drawing.Size(283, 62);
+            this.LogOut.TabIndex = 0;
+            this.LogOut.Text = "           LogOut";
+            this.LogOut.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.LogOut.UseVisualStyleBackColor = false;
             // 
             // SideBarTransition
             // 
@@ -371,15 +371,15 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button HomeBtn;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button Product;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button Categories;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button SalesPerson;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button Order;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button LogOut;
         private System.Windows.Forms.Timer SideBarTransition;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Panel panel9;
