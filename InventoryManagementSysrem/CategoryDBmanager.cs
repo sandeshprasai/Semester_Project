@@ -16,7 +16,7 @@ namespace InventoryManagementSysrem
             return "Data Source=localhost\\sqlexpress;Initial Catalog=MyLogin;Integrated Security=True";
         }
 
-        public void addCategory(string query)
+        public void performoperation(string query)
         {
             SqlConnection conn = new SqlConnection(ConnectionString());
             try

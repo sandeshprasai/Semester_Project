@@ -17,8 +17,43 @@ namespace InventoryManagementSysrem
         public Product_Category()
         {
             InitializeComponent();
+            id_box.KeyPress += id_box_KeyPress;
+            name.KeyPress += name_KeyPress;
+            Description.KeyPress += Description_KeyPress;
             Product_List.DataSource = DB.viewdata();
             
+        }
+        private void id_box_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == ((char)Keys.Enter))
+            {
+                name.Focus();
+                e.Handled = true;
+
+            }
+        }
+        private void name_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == ((char)Keys.Enter))
+            {
+                Description.Focus();
+                e.Handled = true;
+
+            }
+        }
+        private void Description_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == ((char)Keys.Enter))
+            {
+                if (e.KeyChar == ((char)Keys.Enter))
+                {
+                    Add_Btn_Click(sender, e);
+                    e.Handled = true;
+
+                }
+
+
+            }
         }
 
         private void Add_Btn_Click(object sender, EventArgs e)
@@ -26,7 +61,7 @@ namespace InventoryManagementSysrem
             try
             {
                 string query = "INSERT INTO Category_Details (Category_Id,Category_Name,Category_Description) VALUES ('" + Convert.ToInt32(id_box.Text) + "','" + name.Text + "','" + Description.Text + "')";
-                DB.addCategory(query);
+                DB.performoperation(query);
                 MessageBox.Show("Record Inserted");
                 id_box.Clear();
                 name.Clear();
@@ -54,6 +89,40 @@ namespace InventoryManagementSysrem
         private void Edit_Btn_Click(object sender, EventArgs e)
         {
            
+        }
+
+        private void Clear_btn_Click(object sender, EventArgs e)
+        {
+           
+                id_box.Clear();
+                name.Clear();
+                Description.Clear();
+                DataTable dataTable = DB.viewdata();
+                Product_List.DataSource = dataTable;
+            
+        }
+
+        private void Delete_Btn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string query = "DELETE FROM Category_Details WHERE Category_id='" + Convert.ToInt32(id_box.Text) + "'";
+                DB.performoperation(query);
+                MessageBox.Show("Record Delete");
+                DataTable dataTable = DB.viewdata();
+                Product_List.DataSource = dataTable;
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Cannot Delete" + ex);
+            }
+            finally
+            {
+
+                id_box.Clear();
+                name.Clear();
+                Description.Clear();
+            }
         }
     }
 }

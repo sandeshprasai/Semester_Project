@@ -499,6 +499,7 @@
             this.id_box.Size = new System.Drawing.Size(221, 43);
             this.id_box.TabIndex = 24;
             this.id_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            //this.id_box.TextChanged += new System.EventHandler(this.id_box_TextChanged);
             // 
             // label2
             // 
