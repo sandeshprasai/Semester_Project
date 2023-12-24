@@ -117,7 +117,11 @@ namespace InventoryManagementSysrem
 
         }
 
-        
+        private void Categories_Click(object sender, EventArgs e)
+        {
+            Product_Category pc = new Product_Category();
+            openChildFomrm(pc);
+        }
     }
 
 }

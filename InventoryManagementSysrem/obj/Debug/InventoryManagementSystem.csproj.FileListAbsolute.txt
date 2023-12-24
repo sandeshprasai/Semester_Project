@@ -72,3 +72,20 @@ G:\Semester Project\InventoryManagementSysrem\bin\Debug\InventoryManagementSysre
 G:\Semester Project\InventoryManagementSysrem\bin\Debug\InventoryManagementSysrem.pdb
 G:\Semester Project\InventoryManagementSysrem\bin\Debug\Guna.UI2.dll
 G:\Semester Project\InventoryManagementSysrem\obj\Debug\InventoryManagementSystem.csproj.CopyComplete
+E:\SemProject\Semester_Project\InventoryManagementSysrem\bin\Debug\InventoryManagementSysrem.exe.config
+E:\SemProject\Semester_Project\InventoryManagementSysrem\bin\Debug\InventoryManagementSysrem.exe
+E:\SemProject\Semester_Project\InventoryManagementSysrem\bin\Debug\InventoryManagementSysrem.pdb
+E:\SemProject\Semester_Project\InventoryManagementSysrem\bin\Debug\Guna.UI2.dll
+E:\SemProject\Semester_Project\InventoryManagementSysrem\obj\Debug\InventoryManagementSystem.csproj.AssemblyReference.cache
+E:\SemProject\Semester_Project\InventoryManagementSysrem\obj\Debug\InventoryManagementSysrem.Form1.resources
+E:\SemProject\Semester_Project\InventoryManagementSysrem\obj\Debug\InventoryManagementSysrem.Loader.resources
+E:\SemProject\Semester_Project\InventoryManagementSysrem\obj\Debug\InventoryManagementSysrem.HomePage.resources
+E:\SemProject\Semester_Project\InventoryManagementSysrem\obj\Debug\InventoryManagementSysrem.Products.resources
+E:\SemProject\Semester_Project\InventoryManagementSysrem\obj\Debug\InventoryManagementSysrem.Properties.Resources.resources
+E:\SemProject\Semester_Project\InventoryManagementSysrem\obj\Debug\InventoryManagementSysrem.frmRegistration.resources
+E:\SemProject\Semester_Project\InventoryManagementSysrem\obj\Debug\InventoryManagementSystem.csproj.GenerateResource.cache
+E:\SemProject\Semester_Project\InventoryManagementSysrem\obj\Debug\InventoryManagementSystem.csproj.CoreCompileInputs.cache
+E:\SemProject\Semester_Project\InventoryManagementSysrem\obj\Debug\InventoryManagementSystem.csproj.CopyComplete
+E:\SemProject\Semester_Project\InventoryManagementSysrem\obj\Debug\InventoryManagementSysrem.exe
+E:\SemProject\Semester_Project\InventoryManagementSysrem\obj\Debug\InventoryManagementSysrem.pdb
+E:\SemProject\Semester_Project\InventoryManagementSysrem\obj\Debug\InventoryManagementSysrem.Product_Category.resources

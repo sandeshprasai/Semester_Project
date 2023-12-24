@@ -243,6 +243,7 @@
             this.Categories.Text = "           Categories";
             this.Categories.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Categories.UseVisualStyleBackColor = false;
+            this.Categories.Click += new System.EventHandler(this.Categories_Click);
             // 
             // panel5
             // 
