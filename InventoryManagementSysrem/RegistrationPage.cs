@@ -64,5 +64,12 @@ namespace InventoryManagementSysrem
             Usrpassword.Clear();
             RepatPassword.Clear();
         }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+            Form1 fm = new Form1();
+            fm.Show();
+            this.Hide();
+        }
     }
 }

@@ -122,6 +122,12 @@ namespace InventoryManagementSysrem
             Product_Category pc = new Product_Category();
             openChildFomrm(pc);
         }
+
+        private void SalesPerson_Click(object sender, EventArgs e)
+        {
+            SalesPersons sp= new SalesPersons();
+            openChildFomrm(sp);
+        }
     }
 
 }

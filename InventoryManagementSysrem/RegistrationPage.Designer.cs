@@ -187,6 +187,7 @@
             this.label7.Size = new System.Drawing.Size(126, 23);
             this.label7.TabIndex = 5;
             this.label7.Text = "Back to LOGIN";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // DateofBirth
             // 

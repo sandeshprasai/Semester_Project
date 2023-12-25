@@ -269,6 +269,7 @@
             this.SalesPerson.Text = "           SalesPerson";
             this.SalesPerson.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.SalesPerson.UseVisualStyleBackColor = false;
+            this.SalesPerson.Click += new System.EventHandler(this.SalesPerson_Click);
             // 
             // panel6
             // 
