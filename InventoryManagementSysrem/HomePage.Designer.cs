@@ -295,6 +295,7 @@
             this.Order.Text = "           Orders";
             this.Order.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Order.UseVisualStyleBackColor = false;
+            this.Order.Click += new System.EventHandler(this.Order_Click);
             // 
             // panel7
             // 

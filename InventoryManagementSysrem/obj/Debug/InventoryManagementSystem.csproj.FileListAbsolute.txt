@@ -57,7 +57,6 @@ D:\Semester Project\InventoryManagementSysrem\obj\Debug\InventoryManagementSyste
 D:\Semester Project\InventoryManagementSysrem\obj\Debug\InventoryManagementSysrem.exe
 D:\Semester Project\InventoryManagementSysrem\obj\Debug\InventoryManagementSysrem.pdb
 G:\Semester Project\InventoryManagementSysrem\obj\Debug\InventoryManagementSystem.csproj.AssemblyReference.cache
-G:\Semester Project\InventoryManagementSysrem\obj\Debug\InventoryManagementSysrem.Form1.resources
 G:\Semester Project\InventoryManagementSysrem\obj\Debug\InventoryManagementSysrem.Loader.resources
 G:\Semester Project\InventoryManagementSysrem\obj\Debug\InventoryManagementSysrem.HomePage.resources
 G:\Semester Project\InventoryManagementSysrem\obj\Debug\InventoryManagementSysrem.Products.resources
@@ -91,3 +90,5 @@ E:\SemProject\Semester_Project\InventoryManagementSysrem\obj\Debug\InventoryMana
 E:\SemProject\Semester_Project\InventoryManagementSysrem\obj\Debug\InventoryManagementSysrem.Product_Category.resources
 G:\Semester Project\InventoryManagementSysrem\obj\Debug\InventoryManagementSysrem.Product_Category.resources
 G:\Semester Project\InventoryManagementSysrem\obj\Debug\InventoryManagementSysrem.SalesPersons.resources
+G:\Semester Project\InventoryManagementSysrem\obj\Debug\InventoryManagementSysrem.LoginPage.resources
+G:\Semester Project\InventoryManagementSysrem\obj\Debug\InventoryManagementSysrem.BillingPage.resources

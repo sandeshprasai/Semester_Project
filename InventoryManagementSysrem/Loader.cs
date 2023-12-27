@@ -29,7 +29,7 @@ namespace InventoryManagementSysrem
             {
                 timer1.Stop();
                
-                Form1 fm1 = new Form1();
+                LoginPage fm1 = new LoginPage();
                 fm1.Show();
                 this.Hide();
             }

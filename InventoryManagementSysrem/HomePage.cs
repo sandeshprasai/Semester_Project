@@ -11,7 +11,7 @@ using System.Windows.Forms;
 namespace InventoryManagementSysrem
 {
     public partial class HomePage : Form
-    {   
+    {
         public HomePage()
         {
             InitializeComponent();
@@ -19,17 +19,17 @@ namespace InventoryManagementSysrem
             SideBarTransition.Tick += new EventHandler(sideBarTransition_Tick);
             MenuBtn.Click += new EventHandler(MenuBtn_Click);
         }
-       
 
-        public HomePage(string Usrstatus, string Username )
+
+        public HomePage(string Usrstatus, string Username)
         {
 
             InitializeComponent();
-            SideBarTransition.Interval = 10; 
+            SideBarTransition.Interval = 10;
             SideBarTransition.Tick += new EventHandler(sideBarTransition_Tick);
             MenuBtn.Click += new EventHandler(MenuBtn_Click);
             label2.Text = "Hello " + Username;
-            if (Usrstatus=="User")
+            if (Usrstatus == "User")
             {
                 Product.Hide();
                 Categories.Hide();
@@ -43,28 +43,30 @@ namespace InventoryManagementSysrem
         bool sidebarExpand = false;
         private void sideBarTransition_Tick(object sender, EventArgs e)
         {
-            
+
             if (sidebarExpand)
             {
                 sideBar.Width -= 10;
-                if(sideBar.Width <= 50) {
-                sidebarExpand = false;  
-                 SideBarTransition.Stop();
+                if (sideBar.Width <= 50)
+                {
+                    sidebarExpand = false;
+                    SideBarTransition.Stop();
                 }
             }
             else
             {
-                    sideBar.Width += 10;
-                    if(sideBar.Width >= 170) {
+                sideBar.Width += 10;
+                if (sideBar.Width >= 170)
+                {
                     sidebarExpand = true;
-                     SideBarTransition.Stop();
+                    SideBarTransition.Stop();
                 }
             }
         }
 
         private void MenuBtn_Click(object sender, EventArgs e)
         {
-             SideBarTransition.Start();
+            SideBarTransition.Start();
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -84,12 +86,12 @@ namespace InventoryManagementSysrem
 
         private void HomeBtn_Click(object sender, EventArgs e)
         {
-            
+
         }
-        private Form activeForm=null;
-       private void openChildFomrm(Form ChildForm)
+        private Form activeForm = null;
+        private void openChildFomrm(Form ChildForm)
         {
-            if(activeForm != null)
+            if (activeForm != null)
             {
                 activeForm.Close();
             }
@@ -125,9 +127,14 @@ namespace InventoryManagementSysrem
 
         private void SalesPerson_Click(object sender, EventArgs e)
         {
-            SalesPersons sp= new SalesPersons();
+            SalesPersons sp = new SalesPersons();
             openChildFomrm(sp);
         }
-    }
 
+        private void Order_Click(object sender, EventArgs e)
+        {
+           BillingPage bill = new BillingPage();    
+            openChildFomrm(bill);
+        }
+    }
 }

@@ -67,7 +67,7 @@ namespace InventoryManagementSysrem
 
         private void label7_Click(object sender, EventArgs e)
         {
-            Form1 fm = new Form1();
+            LoginPage fm = new LoginPage();
             fm.Show();
             this.Hide();
         }
