@@ -16,7 +16,7 @@ namespace InventoryManagementSysrem
         public HomePage MidParent;
 
         Function fn = new Function();
-
+       
         public Products()
         {
             InitializeComponent();
@@ -122,38 +122,42 @@ namespace InventoryManagementSysrem
             Product_List.DataSource = fn.viewdata();
         }
 
-        private void Delete_Btn_Click(object sender, EventArgs e)
-        {
-            try
-            {
-
-                int productId = Convert.ToInt32(id_box.Text);
-                string deleteQuery = "DELETE FROM Product_Details WHERE Product_id = " + productId;
-                fn.PerformOperaion(deleteQuery);
-            }
-
-            catch
-            {
-                MessageBox.Show("Element deletion Failled");
-            }
-            finally
-            {
-                MessageBox.Show("Product deleted Susessfully");
-                Product_List.DataSource = fn.viewdata();
-            }
-        }
+       
 
         private void Product_List_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex != -1)
+            if (Product_List.Columns[e.ColumnIndex].HeaderText == "Delete" && e.RowIndex != -1)
             {
-                DataGridViewRow PL = Product_List.Rows[e.RowIndex];
-                id_box.Text = PL.Cells[0].Value.ToString();
-                name.Text = PL.Cells[1].Value.ToString();
-                price.Text = PL.Cells[2].Value.ToString();
-                category.Text = PL.Cells[3].Value.ToString();
-                Qty_box.Text = PL.Cells[4].Value.ToString();
+                int id = 0;
+                DialogResult confirm = MessageBox.Show("Are You Sure You want to delete the record", "Warnning", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (confirm == DialogResult.Yes)
+                {
+                    id = Convert.ToInt32(Product_List.Rows[e.RowIndex].Cells["Product_Id"].Value);
+                    string query = "DELETE FROM Product_Details WHERE Product_Id  = '" + id + "' ";
+                   fn.PerformOperaion(query);
+                    MessageBox.Show("Record Deleted");
+                    Product_List.DataSource = fn.viewdata();
+                    
+                }
+                else
+                {
+                    MessageBox.Show("Canclled the deletion");
+                    return;
+                }
+            }
+            if (Product_List.Columns[e.ColumnIndex].HeaderText == "Update" && e.RowIndex != -1)
+            {
 
+                int id = 0; int quantity=0; string name;string category;
+                float price = 0;
+                id = Convert.ToInt32(Product_List.Rows[e.RowIndex].Cells["Product_Id"].Value);
+                name = Product_List.Rows[e.RowIndex].Cells["Product_Name"].Value.ToString();
+                category = Product_List.Rows[e.RowIndex].Cells["Product_Category"].Value.ToString();
+                price = float.Parse(Product_List.Rows[e.RowIndex].Cells["Product_Price"].Value.ToString());
+                quantity = Convert.ToInt32(Product_List.Rows[e.RowIndex].Cells["Product_Quantity"].Value);
+                UpdateProduct up = new UpdateProduct(id, name, price, category, quantity);
+                up.Show();
+                
             }
         }
 
@@ -167,7 +171,14 @@ namespace InventoryManagementSysrem
             {
                 string category = Filter_Box.SelectedItem.ToString();
                 string query = "SELECT * FROM Product_Details WHERE Product_Category = '" + category + "'";
-                Product_List.DataSource = fn.FilterTable(query);
+                if(fn.FilterTable(query)!=null)
+                {
+                    Product_List.DataSource = fn.FilterTable(query);
+                }
+                else
+                {
+                    MessageBox.Show("No record Found","No data",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                }
             }
 
         }
@@ -188,13 +199,7 @@ namespace InventoryManagementSysrem
 
         }
 
-        private void Edit_Btn_Click(object sender, EventArgs e)
-        {
-
-            string Query = "UPDATE  Product_Details SET Product_Name = '" + name.Text + "' , Product_Price = '" + float.Parse(price.Text) + "', Product_Category='" + category.Text + "' , Product_Quantity= '" + Convert.ToInt32(Qty_box.Text) + "' WHERE Product_id='" + Convert.ToInt32(id_box.Text) + "' ";
-            fn.PerformOperaion(Query);
-            Product_List.DataSource = fn.viewdata();
-        }
+        
 
 
         public void fetchCategory()
@@ -222,6 +227,7 @@ namespace InventoryManagementSysrem
             }
         }
 
+       
     }
 }
 

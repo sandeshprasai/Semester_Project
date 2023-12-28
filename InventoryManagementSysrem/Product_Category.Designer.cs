@@ -393,7 +393,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Category_Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Category_Name;
         private System.Windows.Forms.DataGridViewTextBoxColumn Category_Description;
-        private System.Windows.Forms.DataGridViewButtonColumn Update;
+        private new System.Windows.Forms.DataGridViewButtonColumn Update;
         private System.Windows.Forms.DataGridViewButtonColumn Delete;
     }
 }
