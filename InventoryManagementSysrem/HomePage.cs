@@ -136,5 +136,9 @@ namespace InventoryManagementSysrem
            BillingPage bill = new BillingPage();    
             openChildFomrm(bill);
         }
+
+        private void LogOut_Click(object sender, EventArgs e)
+        {
+            Application.Exit();        }
     }
 }

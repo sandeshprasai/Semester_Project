@@ -270,7 +270,6 @@
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(126)))), ((int)(((byte)(34)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
@@ -291,12 +290,12 @@
             this.Product_List.Name = "Product_List";
             this.Product_List.ReadOnly = true;
             this.Product_List.RowHeadersVisible = false;
-            this.Product_List.RowHeadersWidth = 50;
+            this.Product_List.RowHeadersWidth = 40;
             this.Product_List.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.Product_List.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.Purple;
             this.Product_List.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Product_List.RowTemplate.DefaultCellStyle.Padding = new System.Windows.Forms.Padding(10);
-            this.Product_List.RowTemplate.Height = 40;
+            this.Product_List.RowTemplate.DefaultCellStyle.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.Product_List.RowTemplate.Height = 30;
             this.Product_List.Size = new System.Drawing.Size(1365, 434);
             this.Product_List.TabIndex = 15;
             this.Product_List.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Carrot;
@@ -318,7 +317,7 @@
             this.Product_List.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.Product_List.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Product_List.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.OrangeRed;
-            this.Product_List.ThemeStyle.RowsStyle.Height = 40;
+            this.Product_List.ThemeStyle.RowsStyle.Height = 30;
             this.Product_List.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(169)))), ((int)(((byte)(107)))));
             this.Product_List.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.Product_List.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Product_List_CellClick);
@@ -499,7 +498,6 @@
             this.id_box.Size = new System.Drawing.Size(221, 43);
             this.id_box.TabIndex = 24;
             this.id_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            //this.id_box.TextChanged += new System.EventHandler(this.id_box_TextChanged);
             // 
             // label2
             // 

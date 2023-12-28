@@ -321,6 +321,7 @@
             this.LogOut.Text = "           LogOut";
             this.LogOut.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.LogOut.UseVisualStyleBackColor = false;
+            this.LogOut.Click += new System.EventHandler(this.LogOut_Click);
             // 
             // SideBarTransition
             // 

@@ -92,3 +92,4 @@ G:\Semester Project\InventoryManagementSysrem\obj\Debug\InventoryManagementSysre
 G:\Semester Project\InventoryManagementSysrem\obj\Debug\InventoryManagementSysrem.SalesPersons.resources
 G:\Semester Project\InventoryManagementSysrem\obj\Debug\InventoryManagementSysrem.LoginPage.resources
 G:\Semester Project\InventoryManagementSysrem\obj\Debug\InventoryManagementSysrem.BillingPage.resources
+G:\Semester Project\InventoryManagementSysrem\obj\Debug\InventoryManagementSysrem.UpdateCategory.resources

@@ -36,6 +36,7 @@ namespace InventoryManagementSysrem
                 DataTable dt = new DataTable();
                 dt.Load(reader);
                 DataTable dataTable = dt;
+                ReplacePasswordsWithAsterisks(dt);
                 SalesPerson.DataSource = dataTable;
 
             }
@@ -49,9 +50,25 @@ namespace InventoryManagementSysrem
           
         }
 
-       
+        private void ReplacePasswordsWithAsterisks(DataTable dataTable)
+        {
+            // Assuming your password column is named "Password" (adjust accordingly)
+            string passwordColumnName = "Password";
 
-        private void SalesPerson_CellClick(object sender, DataGridViewCellEventArgs e)
+            if (dataTable.Columns.Contains(passwordColumnName))
+            {
+                foreach (DataRow row in dataTable.Rows)
+                {
+                    // Replace the actual password value with asterisks
+                    if (row[passwordColumnName] != DBNull.Value)
+                    {
+                        row[passwordColumnName] = new string('*', row[passwordColumnName].ToString().Length);
+                    }
+                }
+            }
+        }
+
+            private void SalesPerson_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             
             if(e.RowIndex != -1) 

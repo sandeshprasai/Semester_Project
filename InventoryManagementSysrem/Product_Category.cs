@@ -76,13 +76,36 @@ namespace InventoryManagementSysrem
 
         private void Product_List_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex != -1)
+            
+            if (Product_List.Columns[e.ColumnIndex].HeaderText == "Delete" && e.RowIndex != -1 )
             {
-                DataGridViewRow PL = Product_List.Rows[e.RowIndex];
-                id_box.Text = PL.Cells[0].Value.ToString();
-                name.Text = PL.Cells[1].Value.ToString();
-                Description.Text = PL.Cells[2].Value.ToString();
+                int id = 0;
+                DialogResult confirm = MessageBox.Show("Are You Sure You want to delete the record", "Warnning", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (confirm == DialogResult.Yes)
+                { 
+                    id = Convert.ToInt32(Product_List.Rows[e.RowIndex].Cells["Category_Id"].Value);
+                     string query = "DELETE FROM Category_Details WHERE Category_Id  = '" + id + "' ";
+                    DB.performoperation(query);
+                    MessageBox.Show("Record Deleted");
+                     Product_List.DataSource = DB.viewdata();
+                }
+                else
+                {
+                    MessageBox.Show("Canclled the deletion");
+                    return;
+                }
+            }
+            if(Product_List.Columns[e.ColumnIndex].HeaderText == "Update" && e.RowIndex!=-1 )
+                {
 
+                int id = 0; string name;string description;
+              
+                    id = Convert.ToInt32(Product_List.Rows[e.RowIndex].Cells["Category_Id"].Value);
+                    name = Product_List.Rows[e.RowIndex].Cells["Category_Name"].Value.ToString();
+                    description = Product_List.Rows[e.RowIndex].Cells["Category_Description"].Value.ToString();
+                    UpdateCategory catupdate = new UpdateCategory(id, name, description);
+                    catupdate.Show();
+              
             }
         }
 
@@ -117,27 +140,6 @@ namespace InventoryManagementSysrem
             
         }
 
-        private void Delete_Btn_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                string query = "DELETE FROM Category_Details WHERE Category_id='" + Convert.ToInt32(id_box.Text) + "'";
-                DB.performoperation(query);
-                MessageBox.Show("Record Delete");
-                DataTable dataTable = DB.viewdata();
-                Product_List.DataSource = dataTable;
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show("Cannot Delete" + ex);
-            }
-            finally
-            {
-
-                id_box.Clear();
-                name.Clear();
-                Description.Clear();
-            }
-        }
+        
     }
 }

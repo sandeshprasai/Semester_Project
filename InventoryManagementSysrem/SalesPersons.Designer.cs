@@ -42,6 +42,7 @@
             // 
             this.SalesPerson.AllowUserToAddRows = false;
             this.SalesPerson.AllowUserToDeleteRows = false;
+            this.SalesPerson.AllowUserToOrderColumns = true;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.SalesPerson.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.SalesPerson.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Raised;
