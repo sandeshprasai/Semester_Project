@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.id_box = new Guna.UI2.WinForms.Guna2TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.name = new Guna.UI2.WinForms.Guna2TextBox();
@@ -40,13 +41,13 @@
             this.Clear_btn = new Guna.UI2.WinForms.Guna2Button();
             this.Add_Btn = new Guna.UI2.WinForms.Guna2Button();
             this.Product_List = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.label2 = new System.Windows.Forms.Label();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.Category_Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Category_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Category_Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Update = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.label2 = new System.Windows.Forms.Label();
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             ((System.ComponentModel.ISupportInitialize)(this.Product_List)).BeginInit();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
@@ -61,7 +62,7 @@
             this.id_box.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.id_box.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.id_box.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.id_box.FillColor = System.Drawing.Color.LightSeaGreen;
+            this.id_box.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(116)))), ((int)(((byte)(238)))));
             this.id_box.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.id_box.Font = new System.Drawing.Font("Courier New", 12F);
             this.id_box.ForeColor = System.Drawing.Color.Black;
@@ -99,18 +100,18 @@
             this.name.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.name.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.name.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.name.FillColor = System.Drawing.Color.LightSeaGreen;
+            this.name.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(116)))), ((int)(((byte)(238)))));
             this.name.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.name.Font = new System.Drawing.Font("Courier New", 12F);
             this.name.ForeColor = System.Drawing.Color.Black;
             this.name.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.name.Location = new System.Drawing.Point(474, 121);
+            this.name.Location = new System.Drawing.Point(481, 121);
             this.name.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.name.Name = "name";
             this.name.PasswordChar = '\0';
             this.name.PlaceholderText = "";
             this.name.SelectedText = "";
-            this.name.Size = new System.Drawing.Size(236, 43);
+            this.name.Size = new System.Drawing.Size(207, 43);
             this.name.TabIndex = 26;
             this.name.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -143,25 +144,25 @@
             // Description
             // 
             this.Description.AutoRoundedCorners = true;
-            this.Description.BorderRadius = 36;
+            this.Description.BorderRadius = 20;
             this.Description.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.Description.DefaultText = "";
             this.Description.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.Description.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.Description.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.Description.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Description.FillColor = System.Drawing.Color.LightSeaGreen;
+            this.Description.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(116)))), ((int)(((byte)(238)))));
             this.Description.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Description.Font = new System.Drawing.Font("Courier New", 12F);
             this.Description.ForeColor = System.Drawing.Color.Black;
             this.Description.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Description.Location = new System.Drawing.Point(882, 121);
+            this.Description.Location = new System.Drawing.Point(905, 121);
             this.Description.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Description.Name = "Description";
             this.Description.PasswordChar = '\0';
             this.Description.PlaceholderText = "";
             this.Description.SelectedText = "";
-            this.Description.Size = new System.Drawing.Size(371, 74);
+            this.Description.Size = new System.Drawing.Size(371, 43);
             this.Description.TabIndex = 30;
             this.Description.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -212,17 +213,17 @@
             this.Product_List.AllowUserToAddRows = false;
             this.Product_List.AllowUserToDeleteRows = false;
             this.Product_List.AllowUserToResizeColumns = false;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(216)))), ((int)(((byte)(189)))));
-            this.Product_List.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(216)))), ((int)(((byte)(189)))));
+            this.Product_List.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.Product_List.BackgroundColor = System.Drawing.Color.LightSeaGreen;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(126)))), ((int)(((byte)(34)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Product_List.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(126)))), ((int)(((byte)(34)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Product_List.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.Product_List.ColumnHeadersHeight = 40;
             this.Product_List.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.Product_List.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -231,14 +232,14 @@
             this.Category_Description,
             this.Update,
             this.Delete});
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(229)))), ((int)(((byte)(211)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.OrangeRed;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(169)))), ((int)(((byte)(107)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Product_List.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(229)))), ((int)(((byte)(211)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.OrangeRed;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(169)))), ((int)(((byte)(107)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Product_List.DefaultCellStyle = dataGridViewCellStyle4;
             this.Product_List.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.Product_List.GridColor = System.Drawing.Color.Yellow;
             this.Product_List.Location = new System.Drawing.Point(0, 349);
@@ -276,6 +277,29 @@
             this.Product_List.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.Product_List.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Product_List_CellClick);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Courier New", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(485, -15);
+            this.label2.Name = "label2";
+            this.label2.Padding = new System.Windows.Forms.Padding(20);
+            this.label2.Size = new System.Drawing.Size(432, 81);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Product_Category ";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Panel1.Controls.Add(this.label2);
+            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(1347, 53);
+            this.guna2Panel1.TabIndex = 3;
+            // 
             // Category_Id
             // 
             this.Category_Id.DataPropertyName = "Category_Id";
@@ -305,7 +329,11 @@
             // 
             // Update
             // 
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(147)))), ((int)(((byte)(1)))));
+            this.Update.DefaultCellStyle = dataGridViewCellStyle3;
             this.Update.FillWeight = 81.68507F;
+            this.Update.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Update.HeaderText = "Update";
             this.Update.MinimumWidth = 6;
             this.Update.Name = "Update";
@@ -316,6 +344,7 @@
             // Delete
             // 
             this.Delete.FillWeight = 71.04642F;
+            this.Delete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Delete.HeaderText = "Delete";
             this.Delete.MinimumWidth = 6;
             this.Delete.Name = "Delete";
@@ -323,33 +352,11 @@
             this.Delete.Text = "Delete";
             this.Delete.UseColumnTextForButtonValue = true;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Courier New", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(485, -15);
-            this.label2.Name = "label2";
-            this.label2.Padding = new System.Windows.Forms.Padding(20);
-            this.label2.Size = new System.Drawing.Size(432, 81);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Product_Category ";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // guna2Panel1
-            // 
-            this.guna2Panel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Panel1.Controls.Add(this.label2);
-            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1347, 53);
-            this.guna2Panel1.TabIndex = 3;
-            // 
             // Product_Category
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(230)))), ((int)(((byte)(200)))));
             this.ClientSize = new System.Drawing.Size(1347, 783);
             this.Controls.Add(this.Product_List);
             this.Controls.Add(this.Clear_btn);
@@ -381,12 +388,12 @@
         private Guna.UI2.WinForms.Guna2Button Clear_btn;
         private Guna.UI2.WinForms.Guna2Button Add_Btn;
         private Guna.UI2.WinForms.Guna2DataGridView Product_List;
+        private System.Windows.Forms.Label label2;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Category_Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Category_Name;
         private System.Windows.Forms.DataGridViewTextBoxColumn Category_Description;
-        private new System.Windows.Forms.DataGridViewButtonColumn Update;
+        private System.Windows.Forms.DataGridViewButtonColumn Update;
         private System.Windows.Forms.DataGridViewButtonColumn Delete;
-        private System.Windows.Forms.Label label2;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
     }
 }

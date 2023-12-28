@@ -58,19 +58,29 @@ namespace InventoryManagementSysrem
 
         private void Add_Btn_Click(object sender, EventArgs e)
         {
-            try
+            if (string.IsNullOrWhiteSpace(id_box.Text)||
+                string.IsNullOrWhiteSpace(name.Text)||
+                string.IsNullOrWhiteSpace(Description.Text))
+                
             {
-                string query = "INSERT INTO Category_Details (Category_Id,Category_Name,Category_Description) VALUES ('" + Convert.ToInt32(id_box.Text) + "','" + name.Text + "','" + Description.Text + "')";
-                DB.performoperation(query);
-                MessageBox.Show("Record Inserted");
-                id_box.Clear();
-                name.Clear();
-                Description.Clear();
-                Product_List.DataSource = DB.viewdata();
+                MessageBox.Show("Text Field Cannot be empty or cannot contain sapce only", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            catch(Exception ex)
+            else
             {
-                MessageBox.Show("Insertion Failled"+ex);
+                try
+                {
+                    string query = "INSERT INTO Category_Details (Category_Id,Category_Name,Category_Description) VALUES ('" + Convert.ToInt32(id_box.Text) + "','" + name.Text + "','" + Description.Text + "')";
+                    DB.performoperation(query);
+                    MessageBox.Show("Record Inserted");
+                    id_box.Clear();
+                    name.Clear();
+                    Description.Clear();
+                    Product_List.DataSource = DB.viewdata();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Insertion Failled" + ex);
+                }
             }
         }
 
@@ -106,6 +116,20 @@ namespace InventoryManagementSysrem
                     UpdateCategory catupdate = new UpdateCategory(id, name, description);
                     catupdate.Show();
               
+            }
+        }
+
+        private void Product_List_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+            {
+                if (Product_List.Columns[e.ColumnIndex].HeaderText == "Delete" ||
+                    Product_List.Columns[e.ColumnIndex].HeaderText == "Update")
+                {
+                    // Set the background color for the button cells
+                    e.CellStyle.BackColor = Color.FromArgb(234, 40, 58); // Use the color for Delete button
+                    e.CellStyle.ForeColor = Color.White; // Set the text color to contrast with the background
+                }
             }
         }
 
