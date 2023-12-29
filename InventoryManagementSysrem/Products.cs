@@ -92,8 +92,20 @@ namespace InventoryManagementSysrem
 
         private void Add_Btn_Click(object sender, EventArgs e)
         {
+            if(string.IsNullOrWhiteSpace(name.Text)||
+                string.IsNullOrWhiteSpace(price.Text)||
+                string.IsNullOrWhiteSpace(category.Text)||
+                string.IsNullOrWhiteSpace(Qty_box.Text))
+            {
+                MessageBox.Show("All field are required:", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                name.Focus();
+                return;
+            }
             string Name = name.Text;
             int availableQty = fn.ifExists(Name);
+                        
+
+
                 if (availableQty>0)
                 {
                 DialogResult result = MessageBox.Show("The product name already exists in the inventory. Available quantity is " + availableQty + ". Do you want to Update ?", "Product Exists", MessageBoxButtons.YesNo, MessageBoxIcon.Question);

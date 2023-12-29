@@ -17,14 +17,17 @@ namespace InventoryManagementSysrem
         Billing bill;
         private int id;
         private float grand_total = 0;
-        public BillingPage()
+        int user_selling = 0;
+        string UserName;
+        public BillingPage(string Username)
         {
             InitializeComponent();
             
             bill = new Billing();
             id =bill.FetchLastBillId();
+            user_selling = bill.FetchUserSelling(Username);
             ViewData();
-
+            UserName = Username;
 
         }
         public void performclearoperation()
@@ -102,7 +105,7 @@ namespace InventoryManagementSysrem
 
                                 float total = price * quantity;
                                 grand_total += total;
-
+                                user_selling += quantity;
                                 LabelTotal.Text = grand_total.ToString();
                                 performclearoperation();
                                 return;
@@ -135,6 +138,7 @@ namespace InventoryManagementSysrem
                         float total = price * quantity;
                         BillBox.Rows.Add(id, name, price, quantity, total);
                         grand_total = total + grand_total;
+                        user_selling += quantity;
                         id++;
                         LabelTotal.Text = grand_total.ToString();
                         MessageBox.Show("Product Addeed ", "Sucessfull", MessageBoxButtons.OK);
@@ -159,15 +163,18 @@ namespace InventoryManagementSysrem
         private void RemoveButton_Click(object sender, EventArgs e)
         {
             float minus_price = 0;
+            int minus_Quantity = 0;
             try
             {
               
                 if (BillBox.SelectedRows.Count > 0)
                 {
                     DataGridViewRow selectedRow = BillBox.SelectedRows[0];
-                    minus_price = float.Parse(selectedRow.Cells["Total"].Value.ToString()); 
+                    minus_price = float.Parse(selectedRow.Cells["Total"].Value.ToString());
+                    minus_Quantity = Convert.ToInt32(selectedRow.Cells["Quantity"].Value.ToString());
                     BillBox.Rows.Remove(BillBox.SelectedRows[0]);
                     grand_total-= minus_price;
+                    user_selling -= minus_Quantity;
                     LabelTotal.Text=grand_total.ToString();
                 }
                 else
@@ -197,6 +204,7 @@ namespace InventoryManagementSysrem
                     ViewData();
                     
                 }
+                bill.UpdateUserSelling(UserName, user_selling);
                 MessageBox.Show("Bill added to database ", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)

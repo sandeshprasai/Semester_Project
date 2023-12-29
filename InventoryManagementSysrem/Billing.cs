@@ -35,7 +35,7 @@ namespace InventoryManagementSysrem
 
             catch (Exception ex)
             {
-                MessageBox.Show("Errorr while establishing the connection" + ex.Message);
+                MessageBox.Show("Errorr while establishing the connection" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
             }
 
@@ -61,7 +61,7 @@ namespace InventoryManagementSysrem
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Canot read Product quantity in your database" + ex.Message);
+                MessageBox.Show("Canot read Product quantity in your database" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return available;
             }
             finally { conn.Close(); }
@@ -80,7 +80,7 @@ namespace InventoryManagementSysrem
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Connection Failled" + ex.Message);
+                MessageBox.Show("Connection Failled" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -103,7 +103,7 @@ namespace InventoryManagementSysrem
             } 
             catch(Exception ex)
             {
-                MessageBox.Show("Cannot read the current quantity from database" + ex.Message);
+                MessageBox.Show("Cannot read the current quantity from database" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             return currentQuantity;
         }
@@ -123,7 +123,7 @@ namespace InventoryManagementSysrem
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Connection Failled" + ex.Message);
+                MessageBox.Show("Connection Failled" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -146,9 +146,51 @@ namespace InventoryManagementSysrem
             }
             catch(Exception ex)
             {
-                MessageBox.Show("LastId fetching error" + ex.Message);
+                MessageBox.Show("LastId fetching error" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             return lastid+1;
+        }
+
+        public int  FetchUserSelling(string username)
+        {
+            int usersellig=0;
+            SqlConnection conn = new SqlConnection( connectionString());
+            string query = "SELECT TotalSelling FROM Users WHERE Username ='" + username + "' " ;
+            try 
+            {
+                conn.Open();
+
+                SqlCommand cmd = new SqlCommand(query,conn);
+                SqlDataReader reader = cmd.ExecuteReader();
+                if(reader.Read() && reader["TotalSelling"] != DBNull.Value)
+                {
+                    usersellig = Convert.ToInt32(reader["TotalSelling"]);
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Connection to failled fetch user selling: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally { conn.Close(); }
+
+            return usersellig;
+
+        }
+
+        public void UpdateUserSelling(string UserName, int Selling)
+        {
+                SqlConnection conn  = new SqlConnection( connectionString());
+                string query = "UPDATE Users SET TotalSelling = '" + Selling + "' WHERE Username ='" + UserName + "'";
+                 try
+                {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(query, conn);
+                SqlDataReader reader = cmd.ExecuteReader();
+                }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Failled to update User Selling" + ex.Message,"Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
         }
     }
 }

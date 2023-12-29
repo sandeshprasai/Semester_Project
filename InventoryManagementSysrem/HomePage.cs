@@ -12,6 +12,8 @@ namespace InventoryManagementSysrem
 {
     public partial class HomePage : Form
     {
+        HomeElement HME =new HomeElement();
+        string UserName;
         public HomePage()
         {
             InitializeComponent();
@@ -35,6 +37,8 @@ namespace InventoryManagementSysrem
                 Categories.Hide();
                 SalesPerson.Hide();
             }
+            UserName = Username;
+            setElement();
         }
         private void label1_Click(object sender, EventArgs e)
         {
@@ -86,7 +90,12 @@ namespace InventoryManagementSysrem
 
         private void HomeBtn_Click(object sender, EventArgs e)
         {
-
+            if (activeForm != null)
+            {
+                activeForm.Close();
+                activeForm = null;  // Set activeForm to null after closing the form.
+            }
+            setElement();
         }
         private Form activeForm = null;
         private void openChildFomrm(Form ChildForm)
@@ -133,12 +142,34 @@ namespace InventoryManagementSysrem
 
         private void Order_Click(object sender, EventArgs e)
         {
-           BillingPage bill = new BillingPage();    
+           BillingPage bill = new BillingPage(UserName);    
             openChildFomrm(bill);
         }
 
         private void LogOut_Click(object sender, EventArgs e)
         {
-            Application.Exit();        }
+          DialogResult confirm=  MessageBox.Show("Are you Sure You want to logout?", "Do You wan't to Log Out", MessageBoxButtons.YesNo, MessageBoxIcon.Question);   
+            if(confirm == DialogResult.Yes)
+            {
+                Application.Exit();
+            }    
+            else
+            {
+                return;
+            }
+        }
+
+        public void setElement()
+        {
+            SellerName.Text = HME.FetchTopSeller();
+            Quantity.Text = HME.FetchTopSellerQty().ToString(); 
+            Pname.Text=HME.FetchHignStockName();
+            Pqty.Text=HME.FetchHignStockQty().ToString();
+            Lqty.Text=HME.FetchLowStockQty().ToString();
+            LName.Text=HME.FetchLowStockName();
+            RecentlyAdded.DataSource = HME.FetchRecentlyAdded();
+            RecentlySold.DataSource = HME.FetchRecentlySold();
+        }
+        
     }
 }
