@@ -21,7 +21,7 @@ namespace InventoryManagementSysrem
         {
             InitializeComponent();
             fetchCategory();
-            id_box.KeyPress += id_box_KeyPress;
+            
             name.KeyPress += name_KeyPress;
             price.KeyPress += price_KeyPress;
             category.KeyPress += category_KeyPress;
@@ -31,7 +31,7 @@ namespace InventoryManagementSysrem
         }
         private void Clear_btn_Click(object sender, EventArgs e)
         {
-            id_box.Clear();
+            
             name.Clear();
             category.SelectedIndex = -1;
             price.Clear();
@@ -92,6 +92,24 @@ namespace InventoryManagementSysrem
 
         private void Add_Btn_Click(object sender, EventArgs e)
         {
+            string Name = name.Text;
+            int availableQty = fn.ifExists(Name);
+                if (availableQty>0)
+                {
+                DialogResult result = MessageBox.Show("The product name already exists in the inventory. Available quantity is " + availableQty + ". Do you want to Update ?", "Product Exists", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if(result == DialogResult.No)
+                {
+                    return;
+                }
+                else
+                {
+                    int NewQuantity = availableQty+Convert.ToInt32(Qty_box.Text);
+                    string query = "UPDATE Product_Details SET Product_Quantity= '"+NewQuantity +"' WHERE Product_Name = '" + Name + "' ";
+                    fn.PerformOperaion(query);
+                    fn.viewdata();
+                }
+                }
+
             try
             {
                 string insert = "INSERT INTO Product_Details (Product_Name,Product_price,Product_Category,Product_Quantity)  VALUES ('" + name.Text + "' , '" + Convert.ToInt32(this.price.Text) + "' , '" + category.Text + "','" + Convert.ToInt32(this.Qty_box.Text) + "')";
@@ -104,7 +122,7 @@ namespace InventoryManagementSysrem
             }
             finally
             {
-                id_box.Clear();
+                
                 name.Clear();
                 category.SelectedIndex = -1;
                 price.Clear();
@@ -186,6 +204,12 @@ namespace InventoryManagementSysrem
         private void guna2GradientButton1_Click(object sender, EventArgs e)
         {
             string searchtext = SearchBox.Text;
+
+            if(string.IsNullOrWhiteSpace(searchtext))
+            {
+                MessageBox.Show("Please Enter the product name to search for:", "Warnning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
             string query = "SELECT * FROM Product_Details WHERE Product_Name LIKE '%" + searchtext + "%'";
             if (fn.FilterTable(query) == null)

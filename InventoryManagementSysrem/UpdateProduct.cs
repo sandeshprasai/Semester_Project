@@ -28,22 +28,7 @@ namespace InventoryManagementSysrem
             Quantity.Text = quantity.ToString();
         }
 
-        private void Update_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                string Query = "UPDATE  Product_Details SET Product_Name = '" + Name.Text + "' , Product_Price = '" + float.Parse(Price.Text) + "', Product_Category='" + category.Text + "' , Product_Quantity= '" + Convert.ToInt32(Quantity.Text) + "' WHERE Product_id='" + Convert.ToInt32(id_box.Text) + "' ";
-                fn.PerformOperaion(Query);
-                MessageBox.Show("Product Updated SucessFully ", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show("Updation Failled" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-               
-            }
-            
-        }
+       
         public void fetchCategory()
         {
             SqlConnection con = new SqlConnection(fn.connectionstring());
@@ -67,11 +52,39 @@ namespace InventoryManagementSysrem
                 con.Close();
             }
         }
-
-        private void guna2Button1_Click(object sender, EventArgs e)
+        private void guna2Button1_Click_1(object sender, EventArgs e)
         {
             this.Hide();
-            
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(id_box.Text) ||
+                string.IsNullOrWhiteSpace(Name.Text) ||
+                string.IsNullOrWhiteSpace(Quantity.Text) ||
+                string.IsNullOrWhiteSpace(Price.Text) ||
+                category.SelectedItem == null 
+                )
+            {
+                MessageBox.Show("Please fill up all the text boxes:", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+
+            }
+            else
+            {
+                try
+                {
+                    string Query = "UPDATE  Product_Details SET Product_Name = '" + Name.Text + "' , Product_Price = '" + float.Parse(Price.Text) + "', Product_Category='" + category.Text + "' , Product_Quantity= '" + Convert.ToInt32(Quantity.Text) + "' WHERE Product_id='" + Convert.ToInt32(id_box.Text) + "' ";
+                    fn.PerformOperaion(Query);
+                    MessageBox.Show("Product Updated SucessFully ", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Updation Failled" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
+            }
         }
     }
 }

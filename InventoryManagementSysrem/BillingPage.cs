@@ -14,13 +14,17 @@ namespace InventoryManagementSysrem
 {
     public partial class BillingPage : Form
     {
-        Billing bill = new Billing();
-        private int id = 1;
+        Billing bill;
+        private int id;
         private float grand_total = 0;
         public BillingPage()
         {
             InitializeComponent();
+            
+            bill = new Billing();
+            id =bill.FetchLastBillId();
             ViewData();
+
 
         }
         public void performclearoperation()
@@ -176,5 +180,32 @@ namespace InventoryManagementSysrem
                 MessageBox.Show("Error removing item from bill: " + ex.Message);
             }
         }
+
+        private void PrintButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                foreach (DataGridViewRow row in BillBox.Rows)
+                {
+                    string name = row.Cells["NameColumn"].Value.ToString();
+                    float price = float.Parse(row.Cells["PriceColumn"].Value.ToString());
+                    int quantity = Convert.ToInt32(row.Cells["Quantity"].Value.ToString());
+                    float total = float.Parse(row.Cells["Total"].Value.ToString());
+                    string query = "INSERT INTO BillTable (Name, Price, Quantity, Total,Date) VALUES ('" + name + "','" + price + "','" + quantity + "','" + total + "','" + DateTime.Now + "')";
+                    bill.performoperation(query);
+                    bill.UpdateStock(name, quantity);
+                    ViewData();
+                    
+                }
+                MessageBox.Show("Bill added to database ", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+
+            {
+                MessageBox.Show("Failled to print bill " + ex.Message);
+            }
+            
+            BillBox.Rows.Clear();
+        }
+        }
     }
-}

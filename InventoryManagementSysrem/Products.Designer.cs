@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.Add_Btn = new Guna.UI2.WinForms.Guna2Button();
             this.label4 = new System.Windows.Forms.Label();
@@ -54,8 +54,6 @@
             this.Filter = new Guna.UI2.WinForms.Guna2GradientButton();
             this.SearchBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2GradientButton1 = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.label3 = new System.Windows.Forms.Label();
-            this.id_box = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             ((System.ComponentModel.ISupportInitialize)(this.Product_List)).BeginInit();
@@ -97,7 +95,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Courier New", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(232, 74);
+            this.label4.Location = new System.Drawing.Point(108, 74);
             this.label4.Name = "label4";
             this.label4.Padding = new System.Windows.Forms.Padding(0, 10, 0, 10);
             this.label4.Size = new System.Drawing.Size(218, 51);
@@ -110,7 +108,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Courier New", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(740, 74);
+            this.label5.Location = new System.Drawing.Point(616, 74);
             this.label5.Name = "label5";
             this.label5.Padding = new System.Windows.Forms.Padding(0, 10, 0, 10);
             this.label5.Size = new System.Drawing.Size(286, 51);
@@ -132,7 +130,7 @@
             this.name.Font = new System.Drawing.Font("Courier New", 12F);
             this.name.ForeColor = System.Drawing.Color.Black;
             this.name.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.name.Location = new System.Drawing.Point(229, 136);
+            this.name.Location = new System.Drawing.Point(105, 136);
             this.name.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.name.Name = "name";
             this.name.PasswordChar = '\0';
@@ -155,7 +153,7 @@
             this.category.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Bold);
             this.category.ForeColor = System.Drawing.Color.Black;
             this.category.ItemHeight = 30;
-            this.category.Location = new System.Drawing.Point(735, 136);
+            this.category.Location = new System.Drawing.Point(611, 136);
             this.category.Name = "category";
             this.category.Size = new System.Drawing.Size(291, 36);
             this.category.TabIndex = 10;
@@ -167,7 +165,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Courier New", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(486, 74);
+            this.label6.Location = new System.Drawing.Point(362, 74);
             this.label6.Name = "label6";
             this.label6.Padding = new System.Windows.Forms.Padding(0, 10, 0, 10);
             this.label6.Size = new System.Drawing.Size(235, 51);
@@ -189,7 +187,7 @@
             this.price.Font = new System.Drawing.Font("Courier New", 12F);
             this.price.ForeColor = System.Drawing.Color.Black;
             this.price.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.price.Location = new System.Drawing.Point(485, 129);
+            this.price.Location = new System.Drawing.Point(361, 129);
             this.price.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.price.Name = "price";
             this.price.PasswordChar = '\0';
@@ -225,17 +223,17 @@
             this.Product_List.AllowUserToAddRows = false;
             this.Product_List.AllowUserToDeleteRows = false;
             this.Product_List.AllowUserToResizeColumns = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(216)))), ((int)(((byte)(189)))));
-            this.Product_List.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(216)))), ((int)(((byte)(189)))));
+            this.Product_List.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.Product_List.BackgroundColor = System.Drawing.Color.LightSeaGreen;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(126)))), ((int)(((byte)(34)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Product_List.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(126)))), ((int)(((byte)(34)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Product_List.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.Product_List.ColumnHeadersHeight = 40;
             this.Product_List.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.Product_List.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -246,14 +244,14 @@
             this.Product_Quantity,
             this.Update,
             this.Delete});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(229)))), ((int)(((byte)(211)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.OrangeRed;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(169)))), ((int)(((byte)(107)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Product_List.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(229)))), ((int)(((byte)(211)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.OrangeRed;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(169)))), ((int)(((byte)(107)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Product_List.DefaultCellStyle = dataGridViewCellStyle3;
             this.Product_List.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.Product_List.GridColor = System.Drawing.Color.Yellow;
             this.Product_List.Location = new System.Drawing.Point(0, 392);
@@ -366,7 +364,7 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Courier New", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(1046, 74);
+            this.label7.Location = new System.Drawing.Point(922, 74);
             this.label7.Name = "label7";
             this.label7.Padding = new System.Windows.Forms.Padding(0, 10, 0, 10);
             this.label7.Size = new System.Drawing.Size(286, 51);
@@ -388,7 +386,7 @@
             this.Qty_box.Font = new System.Drawing.Font("Courier New", 12F);
             this.Qty_box.ForeColor = System.Drawing.Color.Black;
             this.Qty_box.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Qty_box.Location = new System.Drawing.Point(1052, 129);
+            this.Qty_box.Location = new System.Drawing.Point(928, 129);
             this.Qty_box.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Qty_box.Name = "Qty_box";
             this.Qty_box.PasswordChar = '\0';
@@ -471,44 +469,6 @@
             this.guna2GradientButton1.Text = "Search";
             this.guna2GradientButton1.Click += new System.EventHandler(this.guna2GradientButton1_Click);
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Courier New", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(8, 74);
-            this.label3.Name = "label3";
-            this.label3.Padding = new System.Windows.Forms.Padding(0, 10, 0, 10);
-            this.label3.Size = new System.Drawing.Size(184, 51);
-            this.label3.TabIndex = 23;
-            this.label3.Text = "Product_Id";
-            // 
-            // id_box
-            // 
-            this.id_box.AutoRoundedCorners = true;
-            this.id_box.BorderRadius = 20;
-            this.id_box.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.id_box.DefaultText = "";
-            this.id_box.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.id_box.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.id_box.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.id_box.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.id_box.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(116)))), ((int)(((byte)(238)))));
-            this.id_box.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.id_box.Font = new System.Drawing.Font("Courier New", 12F);
-            this.id_box.ForeColor = System.Drawing.Color.Black;
-            this.id_box.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.id_box.Location = new System.Drawing.Point(0, 136);
-            this.id_box.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.id_box.Name = "id_box";
-            this.id_box.PasswordChar = '\0';
-            this.id_box.PlaceholderText = "";
-            this.id_box.SelectedText = "";
-            this.id_box.Size = new System.Drawing.Size(221, 43);
-            this.id_box.TabIndex = 24;
-            this.id_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -521,7 +481,6 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "Manage Product ";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-           
             // 
             // guna2Panel1
             // 
@@ -540,8 +499,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(230)))), ((int)(((byte)(200)))));
             this.ClientSize = new System.Drawing.Size(1365, 830);
-            this.Controls.Add(this.id_box);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.guna2GradientButton1);
             this.Controls.Add(this.SearchBox);
             this.Controls.Add(this.Filter);
@@ -589,8 +546,6 @@
         private Guna.UI2.WinForms.Guna2GradientButton Filter;
         private Guna.UI2.WinForms.Guna2TextBox SearchBox;
         private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton1;
-        private System.Windows.Forms.Label label3;
-        private Guna.UI2.WinForms.Guna2TextBox id_box;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Product_Id;

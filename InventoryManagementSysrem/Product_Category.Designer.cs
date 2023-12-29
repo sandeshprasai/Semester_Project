@@ -308,6 +308,7 @@
             this.Category_Id.MinimumWidth = 6;
             this.Category_Id.Name = "Category_Id";
             this.Category_Id.ReadOnly = true;
+            this.Category_Id.Visible = false;
             // 
             // Category_Name
             // 

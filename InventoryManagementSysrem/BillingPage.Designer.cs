@@ -60,7 +60,7 @@
             this.PrintButton = new Guna.UI2.WinForms.Guna2Button();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PriceColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView2)).BeginInit();
@@ -388,7 +388,7 @@
             this.BillBox.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.NameColumn,
-            this.Column3,
+            this.PriceColumn,
             this.Quantity,
             this.Total});
             dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -494,12 +494,14 @@
             this.PrintButton.Size = new System.Drawing.Size(129, 45);
             this.PrintButton.TabIndex = 33;
             this.PrintButton.Text = "Print";
+            this.PrintButton.Click += new System.EventHandler(this.PrintButton_Click);
             // 
             // Column1
             // 
             this.Column1.DividerWidth = 5;
             this.Column1.FillWeight = 44.90388F;
             this.Column1.HeaderText = "Id";
+            this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
             // 
@@ -512,14 +514,14 @@
             this.NameColumn.Name = "NameColumn";
             this.NameColumn.ReadOnly = true;
             // 
-            // Column3
+            // PriceColumn
             // 
-            this.Column3.DividerWidth = 5;
-            this.Column3.FillWeight = 77.69753F;
-            this.Column3.HeaderText = "Price";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
+            this.PriceColumn.DividerWidth = 5;
+            this.PriceColumn.FillWeight = 77.69753F;
+            this.PriceColumn.HeaderText = "Price";
+            this.PriceColumn.MinimumWidth = 6;
+            this.PriceColumn.Name = "PriceColumn";
+            this.PriceColumn.ReadOnly = true;
             // 
             // Quantity
             // 
@@ -599,7 +601,7 @@
         private Guna.UI2.WinForms.Guna2Button PrintButton;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn NameColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PriceColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
         private System.Windows.Forms.DataGridViewTextBoxColumn Total;
     }

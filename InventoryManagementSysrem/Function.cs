@@ -23,6 +23,8 @@ namespace InventoryManagementSysrem
         public void PerformOperaion( string query)
         {
 
+
+
             SqlConnection conn = new SqlConnection(connectionstring());
             try
             {
@@ -108,6 +110,32 @@ namespace InventoryManagementSysrem
             {
                 conn.Close();
             }
+        }
+        public int ifExists(string name)
+        {
+            int available = 0;
+            string query = "SELECT Product_Quantity FROM Product_Details WHERE Product_Name = '" + name + "'";
+            SqlConnection con = new SqlConnection(connectionstring());
+
+            try 
+                
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand(query, con);
+                SqlDataReader reader = cmd.ExecuteReader();
+                
+                if(reader.Read())
+                {
+                    available = Convert.ToInt32(reader["Product_Quantity"]);
+                }
+            }
+            catch (Exception ex) 
+            {
+                MessageBox.Show("Cannot Check if product Exists or not " + ex.Message);
+            }
+
+            finally { con.Close(); }
+            return available;
         }
 
     }
