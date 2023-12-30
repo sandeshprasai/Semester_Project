@@ -36,6 +36,7 @@ namespace InventoryManagementSysrem
             category.SelectedIndex = -1;
             price.Clear();
             Qty_box.Clear();
+            SearchBox.Clear();
             DataTable dataTable = fn.viewdata();
             Product_List.DataSource = dataTable;
         }
@@ -106,7 +107,7 @@ namespace InventoryManagementSysrem
                         
 
 
-                if (availableQty>0)
+                if (availableQty>=0)
                 {
                 DialogResult result = MessageBox.Show("The product name already exists in the inventory. Available quantity is " + availableQty + ". Do you want to Update ?", "Product Exists", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if(result == DialogResult.No)
@@ -116,9 +117,10 @@ namespace InventoryManagementSysrem
                 else
                 {
                     int NewQuantity = availableQty+Convert.ToInt32(Qty_box.Text);
-                    string query = "UPDATE Product_Details SET Product_Quantity= '"+NewQuantity +"' WHERE Product_Name = '" + Name + "' ";
+                    string query = "UPDATE Product_Details SET Product_Quantity= '" + NewQuantity + "' , Product_Price ='" + float.Parse(price.Text) +"' WHERE Product_Name = '" + Name + "' ";
                     fn.PerformOperaion(query);
                     fn.viewdata();
+                    return;
                 }
                 }
 

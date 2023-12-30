@@ -54,15 +54,15 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.BillBox = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.RemoveButton = new Guna.UI2.WinForms.Guna2Button();
-            this.label8 = new System.Windows.Forms.Label();
-            this.LabelTotal = new System.Windows.Forms.Label();
-            this.PrintButton = new Guna.UI2.WinForms.Guna2Button();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PriceColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RemoveButton = new Guna.UI2.WinForms.Guna2Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.LabelTotal = new System.Windows.Forms.Label();
+            this.PrintButton = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Product_List)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BillBox)).BeginInit();
@@ -439,6 +439,51 @@
             this.BillBox.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.BillBox.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
+            // Column1
+            // 
+            this.Column1.DividerWidth = 5;
+            this.Column1.FillWeight = 44.90388F;
+            this.Column1.HeaderText = "Id";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // NameColumn
+            // 
+            this.NameColumn.DividerWidth = 5;
+            this.NameColumn.FillWeight = 127.0484F;
+            this.NameColumn.HeaderText = "Name";
+            this.NameColumn.MinimumWidth = 6;
+            this.NameColumn.Name = "NameColumn";
+            this.NameColumn.ReadOnly = true;
+            // 
+            // PriceColumn
+            // 
+            this.PriceColumn.DividerWidth = 5;
+            this.PriceColumn.FillWeight = 77.69753F;
+            this.PriceColumn.HeaderText = "Price";
+            this.PriceColumn.MinimumWidth = 6;
+            this.PriceColumn.Name = "PriceColumn";
+            this.PriceColumn.ReadOnly = true;
+            // 
+            // Quantity
+            // 
+            this.Quantity.DividerWidth = 5;
+            this.Quantity.FillWeight = 106.9519F;
+            this.Quantity.HeaderText = "Quantity";
+            this.Quantity.MinimumWidth = 6;
+            this.Quantity.Name = "Quantity";
+            this.Quantity.ReadOnly = true;
+            // 
+            // Total
+            // 
+            this.Total.DividerWidth = 5;
+            this.Total.FillWeight = 143.3983F;
+            this.Total.HeaderText = "Total";
+            this.Total.MinimumWidth = 6;
+            this.Total.Name = "Total";
+            this.Total.ReadOnly = true;
+            // 
             // RemoveButton
             // 
             this.RemoveButton.AutoRoundedCorners = true;
@@ -495,51 +540,6 @@
             this.PrintButton.TabIndex = 33;
             this.PrintButton.Text = "Print";
             this.PrintButton.Click += new System.EventHandler(this.PrintButton_Click);
-            // 
-            // Column1
-            // 
-            this.Column1.DividerWidth = 5;
-            this.Column1.FillWeight = 44.90388F;
-            this.Column1.HeaderText = "Id";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // NameColumn
-            // 
-            this.NameColumn.DividerWidth = 5;
-            this.NameColumn.FillWeight = 127.0484F;
-            this.NameColumn.HeaderText = "Name";
-            this.NameColumn.MinimumWidth = 6;
-            this.NameColumn.Name = "NameColumn";
-            this.NameColumn.ReadOnly = true;
-            // 
-            // PriceColumn
-            // 
-            this.PriceColumn.DividerWidth = 5;
-            this.PriceColumn.FillWeight = 77.69753F;
-            this.PriceColumn.HeaderText = "Price";
-            this.PriceColumn.MinimumWidth = 6;
-            this.PriceColumn.Name = "PriceColumn";
-            this.PriceColumn.ReadOnly = true;
-            // 
-            // Quantity
-            // 
-            this.Quantity.DividerWidth = 5;
-            this.Quantity.FillWeight = 106.9519F;
-            this.Quantity.HeaderText = "Quantity";
-            this.Quantity.MinimumWidth = 6;
-            this.Quantity.Name = "Quantity";
-            this.Quantity.ReadOnly = true;
-            // 
-            // Total
-            // 
-            this.Total.DividerWidth = 5;
-            this.Total.FillWeight = 143.3983F;
-            this.Total.HeaderText = "Total";
-            this.Total.MinimumWidth = 6;
-            this.Total.Name = "Total";
-            this.Total.ReadOnly = true;
             // 
             // BillingPage
             // 

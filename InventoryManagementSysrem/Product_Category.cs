@@ -17,7 +17,7 @@ namespace InventoryManagementSysrem
         public Product_Category()
         {
             InitializeComponent();
-            id_box.KeyPress += id_box_KeyPress;
+           
             name.KeyPress += name_KeyPress;
             Description.KeyPress += Description_KeyPress;
             Product_List.DataSource = DB.viewdata();
@@ -58,7 +58,7 @@ namespace InventoryManagementSysrem
 
         private void Add_Btn_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(id_box.Text)||
+             if (
                 string.IsNullOrWhiteSpace(name.Text)||
                 string.IsNullOrWhiteSpace(Description.Text))
                 
@@ -69,10 +69,9 @@ namespace InventoryManagementSysrem
             {
                 try
                 {
-                    string query = "INSERT INTO Category_Details (Category_Id,Category_Name,Category_Description) VALUES ('" + Convert.ToInt32(id_box.Text) + "','" + name.Text + "','" + Description.Text + "')";
+                    string query = "INSERT INTO Category_Details (Category_Name,Category_Description) VALUES ('" + name.Text + "','" + Description.Text + "')";
                     DB.performoperation(query);
                     MessageBox.Show("Record Inserted");
-                    id_box.Clear();
                     name.Clear();
                     Description.Clear();
                     Product_List.DataSource = DB.viewdata();
@@ -133,30 +132,10 @@ namespace InventoryManagementSysrem
             }
         }
 
-        private void Edit_Btn_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                string query = "UPDATE  Category_Details SET Category_Name = '" + name.Text + "' ,  Category_Description='" + Description.Text + "'  WHERE Category_Id='" + Convert.ToInt32(id_box.Text) + "' ";
-                DB.performoperation(query);
-                Product_List.DataSource = DB.viewdata();
-                MessageBox.Show("Category Updated Sucessfuly");
-                id_box.Clear();
-                name.Clear();
-                Description.Clear();
-            }
-
-            catch(Exception ex)
-            {
-                MessageBox.Show("Failled to update Product" + ex.Message);
-            }
-
-        }
+        
 
         private void Clear_btn_Click(object sender, EventArgs e)
         {
-           
-                id_box.Clear();
                 name.Clear();
                 Description.Clear();
                 DataTable dataTable = DB.viewdata();

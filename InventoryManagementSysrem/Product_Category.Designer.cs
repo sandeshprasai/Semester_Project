@@ -32,8 +32,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.id_box = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.name = new Guna.UI2.WinForms.Guna2TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -41,54 +39,16 @@
             this.Clear_btn = new Guna.UI2.WinForms.Guna2Button();
             this.Add_Btn = new Guna.UI2.WinForms.Guna2Button();
             this.Product_List = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.Category_Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Category_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Category_Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Update = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.label2 = new System.Windows.Forms.Label();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             ((System.ComponentModel.ISupportInitialize)(this.Product_List)).BeginInit();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // id_box
-            // 
-            this.id_box.AutoRoundedCorners = true;
-            this.id_box.BorderRadius = 20;
-            this.id_box.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.id_box.DefaultText = "";
-            this.id_box.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.id_box.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.id_box.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.id_box.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.id_box.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(116)))), ((int)(((byte)(238)))));
-            this.id_box.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.id_box.Font = new System.Drawing.Font("Courier New", 12F);
-            this.id_box.ForeColor = System.Drawing.Color.Black;
-            this.id_box.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.id_box.Location = new System.Drawing.Point(110, 121);
-            this.id_box.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.id_box.Name = "id_box";
-            this.id_box.PasswordChar = '\0';
-            this.id_box.PlaceholderText = "";
-            this.id_box.SelectedText = "";
-            this.id_box.Size = new System.Drawing.Size(187, 43);
-            this.id_box.TabIndex = 28;
-            this.id_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Courier New", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(104, 66);
-            this.label3.Name = "label3";
-            this.label3.Padding = new System.Windows.Forms.Padding(0, 10, 0, 10);
-            this.label3.Size = new System.Drawing.Size(201, 51);
-            this.label3.TabIndex = 27;
-            this.label3.Text = "Category_Id";
             // 
             // name
             // 
@@ -105,7 +65,7 @@
             this.name.Font = new System.Drawing.Font("Courier New", 12F);
             this.name.ForeColor = System.Drawing.Color.Black;
             this.name.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.name.Location = new System.Drawing.Point(481, 121);
+            this.name.Location = new System.Drawing.Point(289, 121);
             this.name.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.name.Name = "name";
             this.name.PasswordChar = '\0';
@@ -121,7 +81,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Courier New", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(475, 66);
+            this.label4.Location = new System.Drawing.Point(283, 66);
             this.label4.Name = "label4";
             this.label4.Padding = new System.Windows.Forms.Padding(0, 10, 0, 10);
             this.label4.Size = new System.Drawing.Size(235, 51);
@@ -134,7 +94,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Courier New", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(899, 66);
+            this.label1.Location = new System.Drawing.Point(707, 66);
             this.label1.Name = "label1";
             this.label1.Padding = new System.Windows.Forms.Padding(0, 10, 0, 10);
             this.label1.Size = new System.Drawing.Size(354, 51);
@@ -156,7 +116,7 @@
             this.Description.Font = new System.Drawing.Font("Courier New", 12F);
             this.Description.ForeColor = System.Drawing.Color.Black;
             this.Description.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Description.Location = new System.Drawing.Point(905, 121);
+            this.Description.Location = new System.Drawing.Point(713, 121);
             this.Description.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Description.Name = "Description";
             this.Description.PasswordChar = '\0';
@@ -277,29 +237,6 @@
             this.Product_List.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.Product_List.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Product_List_CellClick);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Courier New", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(485, -15);
-            this.label2.Name = "label2";
-            this.label2.Padding = new System.Windows.Forms.Padding(20);
-            this.label2.Size = new System.Drawing.Size(432, 81);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Product_Category ";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // guna2Panel1
-            // 
-            this.guna2Panel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Panel1.Controls.Add(this.label2);
-            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1347, 53);
-            this.guna2Panel1.TabIndex = 3;
-            // 
             // Category_Id
             // 
             this.Category_Id.DataPropertyName = "Category_Id";
@@ -353,6 +290,29 @@
             this.Delete.Text = "Delete";
             this.Delete.UseColumnTextForButtonValue = true;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Courier New", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(485, -15);
+            this.label2.Name = "label2";
+            this.label2.Padding = new System.Windows.Forms.Padding(20);
+            this.label2.Size = new System.Drawing.Size(432, 81);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Product_Category ";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Panel1.Controls.Add(this.label2);
+            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(1347, 53);
+            this.guna2Panel1.TabIndex = 3;
+            // 
             // Product_Category
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -364,8 +324,6 @@
             this.Controls.Add(this.Add_Btn);
             this.Controls.Add(this.Description);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.id_box);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.name);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.guna2Panel1);
@@ -380,8 +338,6 @@
         }
 
         #endregion
-        private Guna.UI2.WinForms.Guna2TextBox id_box;
-        private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2TextBox name;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
